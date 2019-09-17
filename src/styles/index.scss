@@ -1,0 +1,9 @@
+@import "~saagie-ui/src/scss/index.scss";
+
+/*
+  Override default class to prevent .sui-l-app-layout__page-scroll
+  to be invisible because of its position:absolute
+ */
+.sui-l-app-layout__page {
+  height: 100vh;
+}
