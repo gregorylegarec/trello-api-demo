@@ -1080,6 +1080,11 @@
   dependencies:
     redux "^4.0.4"
 
+"@rematch/loading@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@rematch/loading/-/loading-1.1.3.tgz#0bb095e7ab9f6b7f2e9e1e3f69d9c27053efd2f0"
+  integrity sha512-7TKtwncKZ6EuvX/fPdlvlik8JZTC+/wZq90Zhiqlf5xA70iAQEFIdkGvpMZUkWgWay9DRhZhw0180tdJ6S3LnQ==
+
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -3446,7 +3451,7 @@ dotenv-expand@4.2.0:
   resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-4.2.0.tgz#def1f1ca5d6059d24a766e587942c21106ce1275"
   integrity sha1-3vHxyl1gWdJKdm5YeULCEQbOEnU=
 
-dotenv@6.2.0:
+dotenv@6.2.0, dotenv@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
