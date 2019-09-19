@@ -13,8 +13,7 @@ export const authorize = async () =>
       persist: true,
       scope: {
         read: true,
-        write: true,
-        account: false
+        write: true
       },
       success: token => {
         resolve(Trello.token());
@@ -23,13 +22,33 @@ export const authorize = async () =>
     });
   });
 
-// Trello.token() method does not return token from localStorage. It actually
-// returns token after an Trello.authorize() call. So let bypass it to simplify
-// UX.
-export const getToken = () =>
-  window.localStorage && localStorage.get("trello_token");
+/**
+ * Create board with the given name
+ */
+export const createBoard = async name =>
+  new Promise((resolve, reject) => {
+    Trello.post(`/boards/?name=${encodeURI(name)}`, resolve, reject);
+  });
+
+/**
+ * Fetch given board data
+ */
+export const fetchBoard = async boardId =>
+  new Promise((resolve, reject) => {
+    Trello.get(`/boards/${boardId}/?fields=all`, resolve, reject);
+  });
+
+/**
+ * Fetch lists in given board
+ */
+export const fetchBoardLists = async boardId =>
+  new Promise((resolve, reject) => {
+    Trello.get(`/boards/${boardId}/lists/?fields=all`, resolve, reject);
+  });
 
 export default {
   authorize,
-  getToken
+  createBoard,
+  fetchBoard,
+  fetchBoardLists
 };
